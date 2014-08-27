@@ -1,5 +1,8 @@
 {
-  "name": "vuestudy",
+  "name": "ripplestudy",
   "version": "0.0.1",
-  "dependencies": {}
+  "dependencies": {
+    "linzj3/page": "0.1.1",
+    "linzj3/ejs": "0.1.3"
+  }
 }
