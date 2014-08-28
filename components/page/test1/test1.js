@@ -1,5 +1,5 @@
 /**
- * 反馈页
+ * 教程1 超简单的mvvm
  */
 'use strict';
 var template = require('ejs'),
@@ -9,6 +9,9 @@ var template = require('ejs'),
 
   page = {},
   $root,
+  data = {
+    message: 'Hello Vue.js!'
+  },
   _state;
 
 
@@ -25,16 +28,11 @@ page.hide = function () {
 };
 
 page.load = function () {
-  var Person = ripple(template.render(tpl.main)).attr('name',{
-    required:true,
-    type:'string'
-  });
-  var person = new Person({
-    name:'tom'
-  });
- // $root && $root.remove();
-  person.appendTo(document.body);
-  person.name = "jack";
+  $root = $(template.render(tpl.main)).appendTo(document.body);
+  var demo = new Vue({
+    el: '#demo',
+    data: data
+  })
 };
 
 page.unload = function () {
