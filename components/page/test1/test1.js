@@ -1,5 +1,5 @@
 /**
- * 教程1 超简单的mvvm
+ * Vue.js教程 (1): 超简单的MVVM
  */
 'use strict';
 var template = require('ejs'),
